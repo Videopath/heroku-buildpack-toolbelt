@@ -15,7 +15,7 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 mkdir -p heroku-toolbelt
-cd ffmpeg
+cd heroku-toolbelt
 curl -L --silent $DOWNLOAD_URL | tar xz
 
 echo "exporting PATH" | indent
