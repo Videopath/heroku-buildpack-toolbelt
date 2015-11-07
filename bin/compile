@@ -14,11 +14,9 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-mkdir -p heroku-toolbelt
-cd heroku-toolbelt
 curl -L --silent $DOWNLOAD_URL | tar xz
 
 echo "exporting PATH" | indent
-PROFILE_PATH="$BUILD_DIR/.profile.d/heroku-toolbelt.sh"
+PROFILE_PATH="$BUILD_DIR/.profile.d/heroku-client.sh"
 mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:vendor/heroku-toolbelt/bin"' >> $PROFILE_PATH
+echo 'export PATH="$PATH:vendor/heroku-client/bin"' >> $PROFILE_PATH
